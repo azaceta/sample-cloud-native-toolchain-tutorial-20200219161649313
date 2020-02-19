@@ -66,4 +66,4 @@ gulp.task('dev-setup', function() {
   return bower();
 });
 
-gulp.task('dev-unit', ['dev-karma','dev-mocha']);
+gulp.task('dev-unit', gulp.parallel('dev-karma','dev-mocha'));
