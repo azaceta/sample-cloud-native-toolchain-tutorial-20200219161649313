@@ -30,7 +30,7 @@ gulp.task('lint-css', shell.task(
     { cwd: __dirname, ignoreErrors: false }
 ));
 
-gulp.task('lint', ['lint-js','lint-css']);
+gulp.task('lint', gulp.parallel('lint-js','lint-css'));
 
 /*
 Gulp tasks for unit tests
